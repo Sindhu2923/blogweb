@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog website</title>
+    <!-- <link rel="stylesheet" href="C:\Bharath intern\views\style.css"> -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .buttonlink{
+        color : white;
+    }
+    h2 {
+        color: #333;
+    }
+    h4 {
+        color: #555;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    button {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #c82333;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+        <h4> <%=article.title%> </h4>
+        <div> <%=article.createdat.toDateString()%> </div>
+        
+    </div>
+    <button><a href="/" >All Articles</a></button>
+    <button style="background-color:blueviolet " ><a href="/articles/edit/<%=article.id %>" >Edit</a></button>
+        <h5> <%=article.description %> </h5>
+        <br/>
+        <p> <%=article.content %> </p>
+    </div>
+</body>
+</html> 

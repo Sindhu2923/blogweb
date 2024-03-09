@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog website</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    }
+
+    div {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    a {
+        display: inline-block;
+        background-color: #3498db;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+ 
+    button {
+        background-color: #2ecc71;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    </style>
+</head>
+<body>
+   <div>
+        
+  <form method="post" action="/articles/<%=article.id%>" >
+
+    <label>Title : </label>
+    <input type="text" value="<%=article.title %>" name="title" required />
+    <br/>
+    <label>Description : </label>
+    <input type="text" value="<%=article.description %>" name="description" required />
+    <br/>
+    <label>Content : </label>
+    <textarea id="txt" name="content"   required ></textarea>
+    <br/>
+    <a href="/">Cancel</a>
+    <button type="submit" >Save</button>
+ 
+   
+</form>
+
+
+   </div>
+   
+</body>
+</html>
